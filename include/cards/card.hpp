@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-enum class Rank : int {
+enum Rank : int {
     Ace = 1,
     Two = 2,
     Three = 3,
@@ -17,7 +17,7 @@ enum class Rank : int {
     King = 13
 };
 
-enum class Suit {
+enum Suit {
     HEARTS,
     DIAMONDS,
     CLUBS,

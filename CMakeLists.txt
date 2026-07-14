@@ -40,6 +40,7 @@ target_include_directories(moderncpp_lib PUBLIC
 # Creating Library Target
 add_library(cards STATIC
     src/cards/card.cpp
+    src/cards/deck.cpp
 )
 
 # Make the include directorie available to code that links to thae library.
@@ -66,6 +67,8 @@ enable_testing()
 # Create the test executable
 add_executable(main_tests
     tests/main_tests.cpp
+    tests/cards/card_tests.cpp
+    tests/cards/deck_tests.cpp
 )
 
 # Link tests against the library and GoogleTest main entry point

@@ -11,10 +11,11 @@ int main() {
 
     greet(make_greeting());
 
-    Card* newcard = new Card(Rank::Ace, Suit::CLUBS);
+    std::unique_ptr<Card> newcarduniqueptr = std::make_unique<Card>(Rank::Eight, Suit::HEARTS);
 
-    std::cout << static_cast<int>(newcard->get_rank()) << " " << static_cast<int>(newcard->get_suit()) << '\n';
-        std::cout << static_cast<std::string>(newcard->get_rank_name()) << " " << static_cast<std::string>(newcard->get_suit_name()) << '\n';
+
+    std::cout << static_cast<int>(newcarduniqueptr->get_rank()) << " " << static_cast<int>(newcarduniqueptr->get_suit()) << '\n';
+    std::cout << static_cast<std::string>(newcarduniqueptr->get_rank_name()) << " " << static_cast<std::string>(newcarduniqueptr->get_suit_name()) << '\n';
 
 
 
