@@ -23,6 +23,8 @@ FetchContent_Declare(
 # Make the declared dependency available to the build
 FetchContent_MakeAvailable(googletest)
 
+# greeting/Moderncpp_lib
+
 # Create the library target for the greeting implementation
 add_library(moderncpp_lib
     src/greeting.cpp
@@ -33,14 +35,29 @@ target_include_directories(moderncpp_lib PUBLIC
     include
 )
 
+# Cards Library definition
+
+# Creating Library Target
+add_library(cards STATIC
+    src/cards/card.cpp
+)
+
+# Make the include directorie available to code that links to thae library.
+target_include_directories(cards PUBLIC
+    include
+)
+
+# Main executable
+
 # Create the main executable
 add_executable(main
     src/main.cpp
 )
 
-# Link the main executable against the library
+# Link the main executable against the libraries
 target_link_libraries(main PRIVATE
     moderncpp_lib
+    cards
 )
 
 # Enable testing support with CTest

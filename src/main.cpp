@@ -3,6 +3,7 @@ This is practice material by Santiago Ugarte Salas
 
 */
 #include "greeting.hpp"
+#include "card.hpp"
 
 int main() {
 
