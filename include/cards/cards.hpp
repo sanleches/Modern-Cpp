@@ -2,6 +2,6 @@
 
 // Umbrella header for the cards module: include each public header here.
 
-#include "cards/card.hpp"
+#include "card.hpp"
 // #include "cards/deck.hpp"
 // #include "cards/hand.hpp"

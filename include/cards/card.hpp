@@ -1,21 +1,6 @@
 #pragma once
 #include <string>
 
-class Card {
-public:
-    Card(Rank rank, Suit suit);
-
-    Rank get_rank();
-    Suit get_suit();
-
-private:
-    Rank rank_;//
-    Suit suit_;//  
-};
-
-//CARD Enums
-
-//Enum to map all possible card values
 enum class Rank : int {
     Ace = 1,
     Two = 2,
@@ -32,7 +17,25 @@ enum class Rank : int {
     King = 13
 };
 
-//Enum for Card Suit
-enum class Suit{
-    HEARTS, DIAMONDS, CLUBS, SPADES
+enum class Suit {
+    HEARTS,
+    DIAMONDS,
+    CLUBS,
+    SPADES
+};
+
+//
+class Card {
+public:
+    Card(Rank rank, Suit suit);
+
+    Rank get_rank() const;
+    Suit get_suit() const;
+
+    std::string get_rank_name() const;
+    std::string get_suit_name() const;
+
+private:
+    Rank rank_;
+    Suit suit_;
 };
